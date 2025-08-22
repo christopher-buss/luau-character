@@ -1,5 +1,5 @@
 {
-  "name": "luau-character",
+  "name": "@rbxts/luau-character",
   "version": "0.2.0",
   "description": "A Luau library for Unicode character classification and conversion",
   "license": "MIT",
@@ -10,11 +10,18 @@
     "url": "git+https://github.com/seaofvoices/luau-character.git"
   },
   "keywords": [
+    "roblox-ts",
     "luau",
     "unicode",
     "text"
   ],
-  "main": "src/init.luau",
+  "main": "out/character.luau",
+  "types": "out/character.d.ts",
+  "files": [
+    "out/character.d.ts",
+    "out/character.luau",
+    "!**/*.tsbuildinfo"
+  ],
   "scripts": {
     "build": "sh ./scripts/build.sh",
     "clean": "rm -rf node_modules build temp",
@@ -30,7 +37,11 @@
   "devDependencies": {
     "@jsdotlua/jest": "^3.10.0",
     "@jsdotlua/jest-globals": "^3.10.0",
-    "npmluau": "^0.1.2"
+    "@rbxts/compiler-types": "^3.0.0-types.0",
+    "@rbxts/types": "^1.0.877",
+    "npmluau": "^0.1.2",
+    "roblox-ts": "^3.0.0",
+    "typescript": "^5.5.3"
   },
   "packageManager": "yarn@4.9.2"
 }

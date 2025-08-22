@@ -25,3 +25,7 @@ mkdir -p $(dirname "$BUILD_OUTPUT")
 darklua process --config "$DARKLUA_CONFIG" temp/src/init.luau "$BUILD_OUTPUT"
 
 rm -rf temp
+
+mkdir -p out
+rbxtsc --rojo model.project.json
+cp src/character.d.ts out/character.d.ts
