@@ -35,8 +35,8 @@ jobs:
       - name: Install packages
         run: yarn install --immutable
 
-      - name: Run npmluau
-        run: yarn run prepare
+      - name: Run build
+        run: yarn run build
 
       - name: Authenticate yarn
         run: |-
@@ -87,9 +87,6 @@ jobs:
             path: build/character.luau
             asset-type: text/plain
 
-          - artifact-name: character.rbxm
-            path: build/character.rbxm
-            asset-type: application/octet-stream
     steps:
       - uses: actions/checkout@v4
 
